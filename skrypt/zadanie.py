@@ -13,14 +13,14 @@ import wikipediowanie
 
 
 
-def download(address = 'https://www.tiobe.com/tiobe-index/', path = '../page/doc.html'):
+def download(address = 'https://www.tiobe.com/tiobe-index/', path = '../doc.html'):
     response = requests.get(address)
     response.encoding = 'utf-8'
     doc = response.text
     with open(path, 'w', encoding="utf-8") as f:
         f.write(doc)
 
-def scrap(path_original = '../page/doc.html'):
+def scrap(path_original = '../doc.html'):
     with open(path_original, 'r', encoding="utf-8") as f_html:
         content = f_html.read()
 
@@ -57,7 +57,7 @@ def generate_markdown():
         wikipediowanie.create_description(nazwy[i], (i + 1))
 
 
-    mdFile = MdUtils(file_name='../page/index',title='Popularne Jezyki')
+    mdFile = MdUtils(file_name='../index',title='Popularne Jezyki')
     #tabelka:
     list_of_strings = ["Miejsce", "Jezyk", "Logo", "Popularność", "Opis"]
     for i in range(ile_jezykow):

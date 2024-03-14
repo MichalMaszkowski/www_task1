@@ -15,7 +15,7 @@ def create_description(nazwa, nr):
     content = response.text
     soup = BeautifulSoup(content, 'html5lib')
 
-    file_path='../page/opisy/jezyk' + str(nr)
+    file_path='../opisy/jezyk' + str(nr)
     mdFile = MdUtils(file_path, title=nazwa)
 
 
@@ -29,9 +29,6 @@ def create_description(nazwa, nr):
         p = p.next_sibling
 
     md_content = mdFile.create_md_file()
-    # path = '../page/jezyk' + str(nr) + '.md'
-    # with open(path, 'w', encoding="utf-8") as f:
-    #     f.write(md_content)
     
     print(url)
 
