@@ -18,8 +18,11 @@ def create_description(nazwa, nr):
     file_path='../opisy/jezyk' + str(nr)
     mdFile = MdUtils(file_path, title=nazwa)
 
+    i = 1
+    while (p[i].has_class and p[i]['class'][0] == 'mw-empty-elt'):
+        i += 1    
 
-    p = soup.find(id="mw-content-text").find_all('p')[1]
+    p = soup.find(id="mw-content-text").find_all('p')[i]
     paragraf = p.get_text()
     mdFile.new_paragraph(paragraf)
     p = p.next_sibling
