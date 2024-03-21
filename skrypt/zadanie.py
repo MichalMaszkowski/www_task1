@@ -53,13 +53,13 @@ text = """One can wonder what are the most popular programming languages and wha
 are their characcteristics. For each of those questions there are websites \
 trying to answer it. Below you can find a link to a website compiling that \
 information. It's based on the data from 
-[https://www.tiobe.com/tiobe-index/](https://www.tiobe.com/tiobe-index/) \
+[tiobe.com](https://www.tiobe.com/tiobe-index/) \
 for the relative language popularity and on the wikipedia for the short descriptions \
 of respective languages that you can navigate from the table you can find \
 [here](./table.md)"""
 
 def generate_index():
-    mdFile = MdUtils(file_name='../index', title='1. zadanie z www')
+    mdFile = MdUtils(file_name='../index', title='www - 1st homework', author = "Michał Maszkowski")
     mdFile.new_header(level=1, title='What it is about')  # style is set 'atx' format by default.
     
     mdFile.new_paragraph(text)

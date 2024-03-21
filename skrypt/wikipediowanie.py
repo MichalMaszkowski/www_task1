@@ -24,6 +24,10 @@ def create_description(nazwa, nr):
         i += 1    
     
     p = p[i]
+    #czyszczenie referencji:
+    references = p.find_all(class_ = "reference")
+    for r in references:
+        r.clear()
     paragraf = p.get_text()
     mdFile.new_paragraph(paragraf, color = 'blue')
     p = p.next_sibling
