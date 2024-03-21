@@ -29,11 +29,18 @@ def create_description(nazwa, nr):
     for r in references:
         r.clear()
     paragraf = p.get_text()
-    mdFile.new_paragraph(paragraf, color = 'blue')
+    mdFile.new_paragraph(paragraf)
+    mdFile.new_line()
     p = p.next_sibling
     while(p.name == 'p' or p.name == 'ul'):
+        #czyszczenie referencji:
+        references = p.find_all(class_ = "reference")
+        for r in references:
+            r.clear()
+
         paragraf = p.get_text()
-        mdFile.new_paragraph(paragraf, color = 'blue')
+        mdFile.new_paragraph(paragraf)
+        mdFile.new_line()
         p = p.next_sibling
 
     mdFile.new_line(f"[source: wikipedia]({url})")
