@@ -1,15 +1,8 @@
 
-PHP
-===
+Visual Basic
+============
 
 
-PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon or a Common Gateway Interface (CGI) executable. On a web server, the result of the interpreted and executed PHP code—which may be any type of data, such as generated HTML or binary image data—would form the whole or part of an HTTP response. Various web template systems, web content management systems, and web frameworks exist that can be employed to orchestrate or facilitate the generation of that response. Additionally, PHP can be used for many programming tasks outside the web context, such as standalone graphical applications[15] and drone control.[16] PHP code can also be directly executed from the command line.
-
-
-The standard PHP interpreter, powered by the Zend Engine, is free software released under the PHP License. PHP has been widely ported and can be deployed on most web servers on a variety of operating systems and platforms.[17]
-
-
-The PHP language has evolved without a written formal specification or standard, with the original implementation acting as the de facto standard that other implementations aimed to follow. 
-
-
-W3Techs reports that as of 2024[update], PHP is used by 76.6% of all websites whose programming language could be determined, and 58.8% thereof use PHP 7 which is outdated and known to be insecure.[18] Additionally, the most used version of 8.x, 8.0, is no longer supported,[19] meaning the vast majority of PHP users utilize outdated versions, and well over half of all websites, PHP-using or not (whose programming language could be determined) are insecure.
+<font color="blue">The core technology has a long and storied history with products and technological advances spanning decades. Major product lines include:
+</font>  
+[source: wikipedia](https://en.wikipedia.org/wiki/Visual_Basic)

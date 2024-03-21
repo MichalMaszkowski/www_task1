@@ -1,6 +1,7 @@
 #python3 -m venv lab1
 #source lab1/bin/activate
 #pip install html5lib beautifulsoup requests ipython morkdownify
+#pip install -U duckduckgo_search
 
 from bs4 import BeautifulSoup
 import requests
@@ -13,14 +14,14 @@ import wikipediowanie
 
 
 
-def download(address = 'https://www.tiobe.com/tiobe-index/', path = '../doc.html'):
+def download(address = 'https://www.tiobe.com/tiobe-index/', path = '../tiobe.html'):
     response = requests.get(address)
     response.encoding = 'utf-8'
     doc = response.text
     with open(path, 'w', encoding="utf-8") as f:
         f.write(doc)
 
-def scrap(path_original = '../doc.html'):
+def scrap(path_original = '../tiobe.html'):
     with open(path_original, 'r', encoding="utf-8") as f_html:
         content = f_html.read()
 
@@ -48,7 +49,26 @@ def scrap(path_original = '../doc.html'):
     return nazwy, obrazki, procenty
 
 
-def generate_markdown():
+text = """One can wonder what are the most popular programming languages and what \
+are their characcteristics. For each of those questions there are websites \
+trying to answer it. Below you can find a link to a website compiling that \
+information. It's based on the data from 
+[https://www.tiobe.com/tiobe-index/](https://www.tiobe.com/tiobe-index/) \
+for the relative language popularity and on the wikipedia for the short descriptions \
+of respective languages that you can navigate from the table you can find \
+[here](./table.md)"""
+
+def generate_index():
+    mdFile = MdUtils(file_name='../index', title='1. zadanie z www')
+    mdFile.new_header(level=1, title='What it is about')  # style is set 'atx' format by default.
+    
+    mdFile.new_paragraph(text)
+
+    mdFile.create_md_file()
+    return
+
+
+def generate_table():
     nazwy, obrazki, procenty = scrap()
 
     #stworzenie opisow:
@@ -57,9 +77,9 @@ def generate_markdown():
         wikipediowanie.create_description(nazwy[i], (i + 1))
 
 
-    mdFile = MdUtils(file_name='../index',title='Popularne Jezyki')
+    mdFile = MdUtils(file_name='../table',title='Popularity table')
     #tabelka:
-    list_of_strings = ["Miejsce", "Jezyk", "Logo", "Popularność", "Opis"]
+    list_of_strings = ["Index", "Language", "Logo", "Popularity", "Description"]
     for i in range(ile_jezykow):
         podpis = "Logo " + nazwy[i]
         url_obrazka = obrazki[i]
@@ -74,6 +94,6 @@ def generate_markdown():
     
 
 address = 'https://www.tiobe.com/tiobe-index/'
-#download(address)
-scrap()
-generate_markdown()
+download(address)
+generate_index()
+generate_table()

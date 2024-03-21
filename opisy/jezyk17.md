@@ -1,13 +1,14 @@
 
-Kotlin
-======
+Rust
+====
 
 
-Kotlin (/ˈkɒtlɪn/)[2] is a cross-platform, statically typed, general-purpose high-level programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library,[3][failed verification]
-but type inference allows its syntax to be more concise. Kotlin mainly targets the JVM, but also compiles to JavaScript (e.g., for frontend web applications using React)[4] or native code via LLVM (e.g., for native iOS apps sharing business logic with Android apps).[5] Language development costs are borne by JetBrains, while the Kotlin Foundation protects the Kotlin trademark.[6]
+<font color="blue">Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector. To simultaneously enforce memory safety and prevent data races, its "borrow checker" tracks the object lifetime of all references in a program during compilation. Rust was influenced by ideas from functional programming, including immutability, higher-order functions, and algebraic data types. It is popular for systems programming.[13][14][15]
+</font>
 
+<font color="blue">Software developer Graydon Hoare created Rust as a personal project while working at Mozilla Research in 2006. Mozilla officially sponsored the project in 2009. In the years following the first stable release in May 2015, Rust was adopted by companies including Amazon, Discord, Dropbox, Google (Alphabet), Meta, and Microsoft. In December 2022, it became the first language other than C and assembly to be supported in the development of the Linux kernel.
+</font>
 
-On 7 May 2019, Google announced that the Kotlin programming language was now its preferred language for Android app developers.[7] Since the release of Android Studio 3.0 in October 2017, Kotlin has been included as an alternative to the standard Java compiler. The Android Kotlin compiler produces Java 8 bytecode by default (which runs in any later JVM), but lets the programmer choose to target Java 9 up to 20, for optimization,[8] or allows for more features; has bidirectional record class interoperability support for JVM, introduced in Java 16, considered stable as of Kotlin 1.5.
-
-
-Kotlin has support for the web with Kotlin/JS, either through a classic interpreter-based backend which has been declared stable since version 1.3, or an intermediate representation-based backend which has been declared stable since version 1.8. Kotlin/Native (for e.g. Apple silicon support) is considered beta since version 1.3.[9][10]
+<font color="blue">Rust has been noted for its rapid adoption,[16] and has been studied in programming language theory research.[17][18][19]
+</font>  
+[source: wikipedia](https://en.wikipedia.org/wiki/Rust_(programming_language))

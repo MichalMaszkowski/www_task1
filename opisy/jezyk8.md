@@ -3,7 +3,9 @@ Go
 ==
 
 
-Go is a statically typed, compiled high-level programming language designed at Google[12] by Robert Griesemer, Rob Pike, and Ken Thompson.[13] It is syntactically similar to C, but also has memory safety, garbage collection, structural typing,[7] and CSP-style concurrency.[14] It is often referred to as Golang because of its former domain name, golang.org, but its proper name is Go.[15]
+<font color="blue">Go is a statically typed, compiled high-level programming language designed at Google[12] by Robert Griesemer, Rob Pike, and Ken Thompson.[13] It is syntactically similar to C, but also has memory safety, garbage collection, structural typing,[7] and CSP-style concurrency.[14] It is often referred to as Golang because of its former domain name, golang.org, but its proper name is Go.[15]
+</font>
 
-
-There are two major implementations:
+<font color="blue">There are two major implementations:
+</font>  
+[source: wikipedia](https://en.wikipedia.org/wiki/Go_(programming_language))

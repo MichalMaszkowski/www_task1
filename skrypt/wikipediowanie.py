@@ -25,13 +25,14 @@ def create_description(nazwa, nr):
     
     p = p[i]
     paragraf = p.get_text()
-    mdFile.new_paragraph(paragraf)
+    mdFile.new_paragraph(paragraf, color = 'blue')
     p = p.next_sibling
     while(p.name == 'p' or p.name == 'ul'):
         paragraf = p.get_text()
-        mdFile.new_paragraph(paragraf)
+        mdFile.new_paragraph(paragraf, color = 'blue')
         p = p.next_sibling
 
+    mdFile.new_line(f"[source: wikipedia]({url})")
     md_content = mdFile.create_md_file()
 
     print(url)
